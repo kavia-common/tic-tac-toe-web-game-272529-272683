@@ -2,6 +2,30 @@
 
 This project provides a minimal React template with a clean, modern UI and minimal dependencies.
 
+---
+
+## 🟦🟧 Tic Tac Toe Game: Ocean Professional Edition
+
+Run a modern, accessible Tic Tac Toe game in your browser:
+
+- **Play**: Two-player local, 3x3 grid, winner highlight, and draw detection.
+- **Accessibility & UX**: Fully keyboard accessible; ARIA attributes; responsive modern design.
+- **Reset**: Click "Reset" to restart anytime.
+- **Theme**: Ocean Professional (blue/amber), shadow, minimalist gradient.
+
+**To start:**
+1. Install dependencies:  
+   `npm install`
+2. Start development server:  
+   `npm start`  
+   _(then open [http://localhost:3000](http://localhost:3000) in your browser)_
+3. Run tests:  
+   `npm test`
+
+_No backend or API configuration required._
+
+---
+
 ## Features
 
 - **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
@@ -31,27 +55,14 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 ### Colors
 
-The main brand colors are defined as CSS variables in `src/App.css`:
-
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
-```
+The Ocean Professional theme colors are used in `src/styles/theme.css`, and old default variables remain in `src/App.css`.
 
 ### Components
 
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
+This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css` and Tic Tac Toe styles in `src/styles/theme.css`.
 
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
+Common Tic Tac Toe components:
+- Board, Square, StatusBar, Controls—see `src/components/`
 
 ## Learn More
 
