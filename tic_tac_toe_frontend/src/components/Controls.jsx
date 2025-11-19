@@ -15,6 +15,7 @@ const Controls = React.memo(function Controls({ onReset, disabled }) {
         onClick={onReset}
         disabled={disabled}
         aria-disabled={disabled}
+        aria-label="Reset game and clear board"
       >
         Reset Game
       </button>

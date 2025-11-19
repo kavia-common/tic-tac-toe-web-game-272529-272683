@@ -33,7 +33,13 @@ function App() {
 
   return (
     <div className="tictactoe-gradient-bg" data-testid="ttt-bg">
-      <div className="tictactoe-container" role="main" aria-label="Tic Tac Toe Game">
+      <div
+        className="tictactoe-container"
+        role="main"
+        aria-label="Tic Tac Toe main area"
+        tabIndex={-1}
+        id="main-ttt-ui"
+      >
         <button
           className="theme-toggle"
           onClick={toggleTheme}
@@ -42,9 +48,7 @@ function App() {
         >
           {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
         </button>
-
         <StatusBar xIsNext={xIsNext} gameResult={gameResult} />
-
         <Board
           squares={squares}
           onMove={handleSquareMove}
@@ -52,9 +56,7 @@ function App() {
           isBoardDisabled={isBoardDisabled}
           lastMoveIndex={lastMoveIndex}
         />
-
         <Controls onReset={resetGame} disabled={false} />
-
         <footer style={{ marginTop: '2rem', color: '#7d8590', fontSize: '.96rem', textAlign: 'center', opacity: 0.85 }}>
           <span style={{ marginRight: 8 }}>Ocean Professional Theme</span>
           <a href="https://github.com" style={{ color: '#2563EB', textDecoration: 'none' }}>GitHub</a>

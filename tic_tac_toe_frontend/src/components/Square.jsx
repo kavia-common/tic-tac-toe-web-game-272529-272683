@@ -22,17 +22,20 @@ const Square = React.memo(function Square({
   return (
     <button
       type="button"
+      role="button"
+      aria-label={ariaLabel}
+      aria-pressed={!!value}
+      aria-disabled={isDisabled}
       className={
         "tictactoe-square" +
-        (isWinning ? " winner" : "") +
+        (isWinning ? " winner" : "") + 
         (isDisabled ? " disabled" : "")
       }
       ref={btnRef}
       tabIndex={isDisabled ? -1 : 0}
-      aria-label={ariaLabel}
-      aria-pressed={!!value}
-      aria-disabled={isDisabled}
       disabled={isDisabled}
+      data-testid={`ttt-square-${index}`}
+      autoFocus={autoFocus}
       onClick={() => onClick(index)}
       onKeyDown={(e) => {
         if (
@@ -45,7 +48,7 @@ const Square = React.memo(function Square({
         }
       }}
     >
-      {value}
+      <span aria-hidden="true">{value}</span>
     </button>
   );
 });

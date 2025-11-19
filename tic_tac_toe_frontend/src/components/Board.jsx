@@ -19,18 +19,16 @@ const Board = React.memo(function Board({
     <div
       className="tictactoe-board"
       role="grid"
-      aria-label="Tic Tac Toe board 3 by 3"
+      aria-label="Tic Tac Toe game board, 3 by 3"
+      tabIndex={-1}
+      data-testid="ttt-board"
     >
       {squares.map((value, idx) => (
         <Square
           key={idx}
           value={value}
           index={idx}
-          ariaLabel={
-            `Row ${1 + Math.floor(idx / 3)} Column ${1 +
-              (idx % 3)}: ` +
-            (value ? `${value}` : "empty")
-          }
+          ariaLabel={`Row ${1 + Math.floor(idx / 3)} Column ${1 + (idx % 3)}: ${value ? value : "empty"}`}
           isWinning={winningLine && winningLine.includes(idx)}
           isDisabled={isBoardDisabled || !!value}
           onClick={onMove}

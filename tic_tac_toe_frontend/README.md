@@ -55,7 +55,27 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 ### Colors
 
-The Ocean Professional theme colors are used in `src/styles/theme.css`, and old default variables remain in `src/App.css`.
+The Ocean Professional theme colors are in `src/styles/theme.css`, and old default variables remain in `src/App.css`.
+
+### Responsive & Accessibility
+
+- The layout is fully responsive for desktop and mobile.
+- All interactive elements have clear :focus-visible outlines, optimized for keyboard navigation.
+- ARIA roles and labels are included for the board, squares, and reset button to support screen readers.
+- Board navigation supports Enter/Space to activate a square.
+
+### Animations
+
+- Interactive states: Smooth transitions for board and buttons via CSS.
+- Winner highlight: Subtle animated glow on the three winning squares.
+- Micro-interactions: Hover, active, and focus-visible animations on all controls.
+- All board/square transitions and highlight animations are skipped if your OS/browser requests "reduced motion."
+
+### Disabling Animations
+
+By default, smooth transitions and win animations are enabled.  
+If you'd like to disable them, set your device or browser's "Reduce Motion" flag (System Accessibility settings, or in OS browser settings).  
+Animations will be disabled via CSS `prefers-reduced-motion: reduce`.
 
 ### Components
 
